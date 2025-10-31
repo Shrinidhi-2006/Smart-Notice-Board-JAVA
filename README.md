@@ -1,4 +1,4 @@
-# 🪧 Virtual Notice Board - Backend
+# 🪧 Virtual Notice Board - JAVA
 
 ### Developed by: Team Code Monkeys  
 **College:** Vivekananda College of Engineering & Technology (VCET)
