@@ -42,5 +42,5 @@ and communication between the Angular frontend and the MySQL database using REST
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YourUsername/virtual-noticeboard-backend.git
-   cd virtual-noticeboard-backend
+   git clone https://github.com/Shrinidhi-2006/Smart-Notice-Board-JAVA.git
+   cd Smart-Notice-Board-JAVA
