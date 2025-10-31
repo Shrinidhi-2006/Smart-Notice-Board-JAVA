@@ -35,7 +35,28 @@ It serves RESTful APIs for the Angular frontend and securely stores all data in 
 
 ## ⚙️ Installation & Setup
 
-### 1️⃣ Clone the repository
-```bash
-git clone https://github.com/Shrinidhi-2006/Virtual-Notice-Board-JAVA.git
-cd Virtual-Notice-Board-JAVA
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Shrinidhi-2006/Virtual-Notice-Board-JAVA.git
+   cd Virtual-Notice-Board-JAVA
+
+2. **Create MySQL Database**
+   ```bash
+   CREATE DATABASE virtual_noticeboard;
+
+3. **Configure Database Connection**
+   ```bash
+   spring.datasource.url=jdbc:mysql://localhost:3306/virtual_notice_board
+   spring.datasource.username=root
+   spring.datasource.password=root
+   spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+   spring.jpa.hibernate.ddl-auto=update
+   spring.jpa.hibernate.ddl-auto=update
+
+4. **Run the Application**
+   ```bash
+   mvn spring-boot:run
+
+5. **The backend server will start on:**
+   ```bash
+   http://localhost:8080
