@@ -42,7 +42,7 @@ It serves RESTful APIs for the Angular frontend and securely stores all data in 
 
 2. **Create MySQL Database**
    ```bash
-   CREATE DATABASE virtual_noticeboard;
+   CREATE DATABASE virtual_notice_board;
 
 3. **Configure Database Connection**
    ```bash
