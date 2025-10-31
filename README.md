@@ -38,9 +38,9 @@ and communication between the Angular frontend and the MySQL database using REST
 
 ---
 
-## ⚙️ Setup Instructions
+## ⚙️ Installation & Setup
 
 1. **Clone the repository**
-   ```bash 
+   ```bash
    git clone https://github.com/Shrinidhi-2006/Smart-Notice-Board-JAVA.git
    cd Smart-Notice-Board-JAVA
