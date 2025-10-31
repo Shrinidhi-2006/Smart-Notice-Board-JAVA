@@ -37,5 +37,5 @@ It serves RESTful APIs for the Angular frontend and securely stores all data in 
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/Shrinidhi-2006/Smart-Notice-Board-JAVA.git
-cd Smart-Notice-Board-JAVA
+git clone https://github.com/Shrinidhi-2006/Virtual-Notice-Board-JAVA.git
+cd Virtual-Notice-Board-JAVA
