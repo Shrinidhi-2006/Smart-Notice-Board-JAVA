@@ -1,27 +1,21 @@
-
----
-
-# ⚙️ **Backend – Spring Boot (Virtual Notice Board)**
-
-```markdown
 # 🪧 Virtual Notice Board - Backend
 
 ### Developed by: Team Code Monkeys  
 **College:** Vivekananda College of Engineering & Technology (VCET)
 
-The backend of the **Virtual Notice Board (VNB)** handles authentication, authorization, data management,  
-and communication between the Angular frontend and the MySQL database using REST APIs.
+The **Virtual Notice Board (VNB)** backend is the core of the system that powers authentication, authorization, and all notice management operations.  
+It serves RESTful APIs for the Angular frontend and securely stores all data in a MySQL database.
 
 ---
 
 ## 🚀 Features
 
-- 🧩 **RESTful APIs** for all notice operations  
-- 🔐 **JWT Authentication** and **Role-Based Access Control (RBAC)**  
-- 💾 **MySQL Database** for secure data storage  
-- 🧾 **CRUD Operations** for managing notices  
-- ⚙️ **Spring Security** for endpoint protection  
-- 🕓 **Logging & Timestamping** for all notice updates  
+- 🔐 **JWT Authentication** and **Role-Based Access Control (RBAC)**
+- 🧩 **RESTful APIs** for creating, reading, updating, and deleting notices
+- 🧑‍🏫 **User Roles:** Admin, Teacher, and Student
+- 💾 **MySQL Database Integration** for persistent storage
+- 🧱 **Error Handling & Validation** for secure data flow
+- ⚙️ **Spring Security** for protecting all endpoints
 
 ---
 
@@ -29,18 +23,19 @@ and communication between the Angular frontend and the MySQL database using REST
 
 | Technology | Purpose |
 |-------------|----------|
-| **Spring Boot 3+** | Backend framework for creating REST APIs |
-| **Spring Security + JWT** | Authentication and role-based access |
-| **Spring Data JPA** | Simplifies database interaction |
-| **MySQL** | Stores user and notice data securely |
-| **Maven** | Dependency management and build automation |
-| **Postman / Swagger** | For API testing and documentation |
+| **Java 17+** | Core backend programming language |
+| **Spring Boot 3+** | Framework for building production-ready REST APIs |
+| **Spring Security + JWT** | Authentication and authorization management |
+| **Spring Data JPA** | ORM layer for database interaction |
+| **MySQL** | Relational database for data storage |
+| **Maven** | Build and dependency management |
+| **Postman / Swagger** | API testing and documentation tools |
 
 ---
 
 ## ⚙️ Installation & Setup
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Shrinidhi-2006/Smart-Notice-Board-JAVA.git
-   cd Smart-Notice-Board-JAVA
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/Shrinidhi-2006/Smart-Notice-Board-JAVA.git
+cd Smart-Notice-Board-JAVA
