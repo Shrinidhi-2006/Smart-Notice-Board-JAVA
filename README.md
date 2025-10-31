@@ -1,1 +1,1 @@
-Smart-Notice-Board-JAVA
+Virtual-Notice-Board-JAVA
