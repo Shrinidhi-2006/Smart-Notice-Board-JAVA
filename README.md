@@ -28,7 +28,6 @@ It serves RESTful APIs for the Angular frontend and securely stores all data in 
 | **Spring Security + JWT** | Authentication and authorization management |
 | **Spring Data JPA** | ORM layer for database interaction |
 | **MySQL** | Relational database for data storage |
-| **Maven** | Build and dependency management |
 | **Postman / Swagger** | API testing and documentation tools |
 
 ---
