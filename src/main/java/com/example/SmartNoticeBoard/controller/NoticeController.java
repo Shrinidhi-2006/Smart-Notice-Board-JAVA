@@ -113,7 +113,7 @@ public class NoticeController {
 
 			HttpServletRequest request) {
 
-		// ✅ Extract username from JWT
+		// Extract username from JWT
 		String authHeader = request.getHeader("Authorization");
 		String username = null;
 
@@ -121,7 +121,7 @@ public class NoticeController {
 			username = jwtUtil.extractUsername(authHeader.substring(7));
 		}
 
-		// ✅ Get user details from DB
+		// Get user details from DB
 		if (username != null) {
 			User user = userRepository.findByUsername(username);
 			if (user != null) {
