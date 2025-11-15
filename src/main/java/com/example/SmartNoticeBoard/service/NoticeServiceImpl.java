@@ -76,13 +76,27 @@ public class NoticeServiceImpl implements NoticeService {
 				try {
 					String fullPath = baseDir + fileName;
 					byte[] fileContent = Files.readAllBytes(Paths.get(fullPath));
-					String contentType = "image/jpeg";
-					if (fileName.toLowerCase().endsWith(".png"))
-						contentType = "image/png";
-					else if (fileName.toLowerCase().endsWith(".gif"))
-						contentType = "image/gif";
+
+					String contentType = Files.probeContentType(Paths.get(fullPath));
+
+					if (contentType == null) {
+						// fallback based on extension
+						String lower = fileName.toLowerCase();
+						if (lower.endsWith(".pdf")) {
+							contentType = "application/pdf";
+						} else if (lower.endsWith(".png")) {
+							contentType = "image/png";
+						} else if (lower.endsWith(".jpg") || lower.endsWith(".jpeg")) {
+							contentType = "image/jpeg";
+						} else if (lower.endsWith(".gif")) {
+							contentType = "image/gif";
+						} else {
+							contentType = "application/octet-stream";
+						}
+					}
 
 					return "data:" + contentType + ";base64," + Base64.getEncoder().encodeToString(fileContent);
+
 				} catch (Exception e) {
 					return null;
 				}
@@ -314,9 +328,7 @@ public class NoticeServiceImpl implements NoticeService {
 		// Fetch department = student's + ALL, year = student's + ALL
 		Page<Notice> noticePage = noticeRepository.findStudentNotices(department, year, pageable);
 
-		List<NoticeDto> notices = noticePage.getContent().stream()
-				.map(this::mapToDto)
-				.collect(Collectors.toList());
+		List<NoticeDto> notices = noticePage.getContent().stream().map(this::mapToDto).collect(Collectors.toList());
 
 		Map<String, Object> response = new HashMap<>();
 		response.put("notices", notices);

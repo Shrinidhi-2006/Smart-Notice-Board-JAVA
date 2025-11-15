@@ -38,11 +38,12 @@ public class NoticeController {
 
 	// Admin/Teacher → Create Notice
 	@PostMapping(value = "/createNotice", consumes = { "multipart/form-data" })
-	public NoticeDto createNotice(@RequestPart("notice") NoticeDto noticeDto,
-			@RequestPart(value = "images", required = false) List<MultipartFile> images,
-			@RequestParam Long postedById) {
+	public NoticeDto createNotice(
+	        @RequestPart("notice") NoticeDto noticeDto,
+	        @RequestPart(value = "files", required = false) List<MultipartFile> files,
+	        @RequestParam Long postedById) {
 
-		return noticeService.createNotice(noticeDto, postedById, images);
+	    return noticeService.createNotice(noticeDto, postedById, files);
 	}
 
 	// Admin → Delete Notice
@@ -104,7 +105,6 @@ public class NoticeController {
 
 	    return noticeService.studentFilterNotices(postedBy, uploadedYear, department, year, page, size);
 	}
-
 
 	// Admin/Teacher → Update Notice
 	@PutMapping("/updateNoticeWithImages/{id}")
